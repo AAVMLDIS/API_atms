@@ -6,6 +6,8 @@ import geopy
 import geopy.distance
 import pandas as pd
 from io import BytesIO
+import xgboost
+import pickle
 
 app = FastAPI(title='Популярная геолокация')
 
