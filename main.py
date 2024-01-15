@@ -147,10 +147,16 @@ def predict_class_by_adress(adress: str):
 
     return 'Вы промахнулись мимо сетки городов, попробуйте снова'
 
+@app.post("/predict_items")
+def predict_items(file: UploadFile = File()) -> FileResponse:
+    df = pd.DataFrame({'Город': 1})
+    df.to_csv('result.csv')
+    response = FileResponse(path='result.csv', media_type='text/csv')
+    return response
 
-@app.post("/file/upload-file")
-def upload_file(file: UploadFile=File()):
-    return file
+# @app.post("/file/upload-file")
+# def upload_file(file: UploadFile=File()):
+#     return file
      
 # @app.post('/predict_class_by_addresses')
 # def predict_class_by_addresses(file: UploadFile=File()) -> FileResponse:
