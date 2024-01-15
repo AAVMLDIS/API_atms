@@ -148,19 +148,24 @@ def predict_class_by_adress(adress: str):
     return 'Вы промахнулись мимо сетки городов, попробуйте снова'
 
 
-@app.post('/predict_class_by_addresses')
-def predict_class_by_addresses(file: UploadFile = File() ) -> FileResponse :
-    '''
-    Функция на вход принимает csv файл,
-    где представлен перечень адресов.
-    На выходе функция выдает csv файл,
-    где для каждого адреса проставлена
-    метка класса
-    '''
-    df_res = pd.DataFrame({'Город':'Москва'})
-    df_res.to_csv('result.csv', index=False)
-    response = FileResponse(path='result.csv', media_type='text/csv')    
-    return response
+# @app.post('/predict_class_by_addresses')
+# def predict_class_by_addresses(file: UploadFile = File() ) -> FileResponse :
+
+@app.post("/uploadfile/")
+async def create_upload_file(file: UploadFile):
+    return {"filename": file.filename}
+     
+    # '''
+    # Функция на вход принимает csv файл,
+    # где представлен перечень адресов.
+    # На выходе функция выдает csv файл,
+    # где для каждого адреса проставлена
+    # метка класса
+    # '''
+    # df_res = pd.DataFrame({'Город':'Москва'})
+    # df_res.to_csv('result.csv', index=False)
+    # response = FileResponse(path='result.csv', media_type='text/csv')    
+    # return response
 
 
     # content = file.file.read()
