@@ -134,11 +134,12 @@ def predict_class_by_adress(adress: str):
                 .drop(['city', 'cell', 'avg_score', 'cnt_atms'], axis=1)
 
 
-            with open('model_xgb.pkl', 'rb') as file:
-                model = pickle.load(file)
-                result = model.predict(hex_features_vector)
+            # with open('model_xgb.pkl', 'rb') as file:
+            #     model = pickle.load(file)
+            #     result = model.predict(hex_features_vector)
 
-            return int(result[0])
+            # return int(result[0])
+         return 123
 
         else:
             continue
