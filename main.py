@@ -132,7 +132,7 @@ def predict_class_by_adress(adress: str):
 
             hex_features_vector = df[(df['city'] == curr_city) & (df['cell'] == hexagon)] \
                 .drop(['city', 'cell', 'avg_score', 'cnt_atms'], axis=1)
-            return 123
+            return hex_features_vector[0]
 
 
             # with open('model_xgb.pkl', 'rb') as file:
