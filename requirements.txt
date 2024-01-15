@@ -10,3 +10,5 @@ tzdata
 uvicorn
 pandas
 numpy
+pyarrow
+xgboost
