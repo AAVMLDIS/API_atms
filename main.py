@@ -130,7 +130,7 @@ def predict_class_by_adress(adress: str):
             hexagon = str(findloc(lat=latitude,
                                   lon=longitude,
                                   poly=cell_center))
-             return str(hexagon)
+            return str(hexagon)
                
             # hex_features_vector = df[(df['city'] == curr_city) & (df['cell'] == hexagon)] \
             #     .drop(['city', 'cell', 'avg_score', 'cnt_atms'], axis=1)
