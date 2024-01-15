@@ -138,10 +138,9 @@ def predict_class_by_adress(adress: str):
                 .drop(['city', 'cell'], axis=1)
 
             with open('model_xgb.pkl', 'rb') as file:
-                 model = pickle.load(file)
+                 model = pickle.load(file)   
+                 result = model.predict(hex_features_vector)
                  return 167.87367863476
-                # model = pickle.load(file)
-                # result = model.predict(hex_features_vector)
                 
             
             
