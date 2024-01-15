@@ -29,4 +29,3 @@ uvicorn
 uvloop==0.19.0
 watchfiles
 websockets
-xgboost
