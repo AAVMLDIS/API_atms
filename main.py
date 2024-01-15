@@ -149,7 +149,7 @@ def predict_class_by_adress(adress: str):
 
 
 @app.post('/predict_class_by_addresses')
-def predict_class_by_addresses(file: UploadFile = File() ):
+def predict_class_by_addresses(file: UploadFile = File() ) -> FileResponse :
     '''
     Функция на вход принимает csv файл,
     где представлен перечень адресов.
@@ -157,8 +157,12 @@ def predict_class_by_addresses(file: UploadFile = File() ):
     где для каждого адреса проставлена
     метка класса
     '''
-    return 123
-     
+    df_res = pd.DataFrame({'Город':'Москва'})
+    df_res.to_csv('result.csv', index=False)
+    response = FileResponse(path='result.csv', media_type='text/csv')    
+    return response
+
+
     # content = file.file.read()
     # test = BytesIO(content)
     # test = pd.read_csv(test).to_numpy()
