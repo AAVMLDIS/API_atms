@@ -141,7 +141,7 @@ def predict_class_by_adress(adress: str):
                 model = pickle.load(file)
                 result = model.predict(hex_features_vector)
             
-             return 167.87367863476
+            return 167.87367863476
                  
             
     #         # return int(result[0])
