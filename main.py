@@ -149,8 +149,8 @@ def predict_class_by_adress(adress: str):
 
 
 @app.post("/uploadfile/")
-def create_upload_file(file: UploadFile = File()):
-    return 123
+def create_upload_file(x: UploadFile = File()):
+    pass
 
 # @app.post('/predict_class_by_addresses')
 # def predict_class_by_addresses(file: UploadFile = File() ) -> FileResponse :
