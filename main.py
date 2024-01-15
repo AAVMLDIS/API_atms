@@ -134,13 +134,11 @@ def predict_class_by_adress(adress: str):
                
             hex_features_vector = df[(df['city'] == curr_city) & (df['cell'] == hexagon)] \
                 .drop(['city', 'cell'], axis=1)
-            return 167.87367863476
-            
-            
 
-            # with open('model_xgb.pkl', 'rb') as file:
-            #     model = pickle.load(file)
-            #     result = model.predict(hex_features_vector)
+            with open('model_xgb.pkl', 'rb') as file:
+                model = pickle.load(file)
+                result = model.predict(hex_features_vector)
+                return 167.87367863476
             
             
                  
