@@ -133,7 +133,7 @@ def predict_class_by_adress(adress: str):
             
                
             hex_features_vector = df[(df['city'] == curr_city) & (df['cell'] == hexagon)] \
-                .drop(['city', 'cell', 'avg_score', 'cnt_atms'], axis=1)
+                .drop(['city', 'cell'], axis=1)
             return 167.87367863476
             
 
