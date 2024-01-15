@@ -9,3 +9,5 @@ scikit-learn
 starlette
 tzdata
 uvicorn
+pandas
+numpy
