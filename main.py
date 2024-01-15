@@ -157,18 +157,19 @@ def predict_class_by_addresses(file: UploadFile = File()) -> FileResponse:
     где для каждого адреса проставлена
     метка класса
     '''
-
-    content = file.file.read()
-    test = BytesIO(content)
-    test = pd.read_csv(test).to_numpy()
-    arr = []
-
-    arr_result = []
-
-    for num in test:
-        arr.append(num[0])
-         
     return 123 
+     
+    # content = file.file.read()
+    # test = BytesIO(content)
+    # test = pd.read_csv(test).to_numpy()
+    # arr = []
+
+    # arr_result = []
+
+    # for num in test:
+    #     arr.append(num[0])
+         
+    # return 123 
     # for adress in arr:
 
     #     # подаем токен, секретный код и адрес, для которого хотим получить score в dadata
