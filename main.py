@@ -148,12 +148,14 @@ def predict_class_by_adress(adress: str):
     return 'Вы промахнулись мимо сетки городов, попробуйте снова'
 
 
+@app.post("/uploadfile/")
+def create_upload_file(file: UploadFile):
+    return 1
+
 # @app.post('/predict_class_by_addresses')
 # def predict_class_by_addresses(file: UploadFile = File() ) -> FileResponse :
 
-@app.post("/uploadfile/")
-async def create_upload_file(file: UploadFile):
-    return {"filename": file.filename}
+
      
     # '''
     # Функция на вход принимает csv файл,
