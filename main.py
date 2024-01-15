@@ -148,16 +148,16 @@ def predict_class_by_adress(adress: str):
     return 'Вы промахнулись мимо сетки городов, попробуйте снова'
 
 
-@app.post('/predict_class_by_addresses')
-def predict_class_by_addresses(file: UploadFile = File()):
-    '''
-    Функция на вход принимает csv файл,
-    где представлен перечень адресов.
-    На выходе функция выдает csv файл,
-    где для каждого адреса проставлена
-    метка класса
-    '''
-    return 123 
+# @app.post('/predict_class_by_addresses')
+# def predict_class_by_addresses(file: UploadFile = File()):
+#     '''
+#     Функция на вход принимает csv файл,
+#     где представлен перечень адресов.
+#     На выходе функция выдает csv файл,
+#     где для каждого адреса проставлена
+#     метка класса
+#     '''
+#     return 123 
      
     # content = file.file.read()
     # test = BytesIO(content)
