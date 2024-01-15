@@ -147,7 +147,6 @@ def predict_class_by_adress(adress: str):
 
     return 'Вы промахнулись мимо сетки городов, попробуйте снова'
 
-
 @app.post("/uploadfile/")
 def create_upload_file(x: UploadFile = File()):
     pass
