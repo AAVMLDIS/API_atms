@@ -26,10 +26,21 @@ packaging
 pandas
 pyarrow
 pydantic
+pydantic-extra-types
+pydantic-settings
+pydantic_core
+python-dateutil
+python-dotenv
+python-multipart
 pytz
 PyYAML
 scikit-learn
 scipy
+six
+sniffio
+starlette
+threadpoolctl
+typing_extensions
 tzdata
 ujson
 uvicorn
@@ -37,5 +48,3 @@ uvloop
 watchfiles
 websockets
 xgboost
-
-
