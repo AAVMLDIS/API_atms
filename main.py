@@ -11,6 +11,13 @@ import pickle
 
 app = FastAPI(title='Популярная геолокация')
 
+@app.post("/predict_items")
+def predict_items(file: UploadFile = File()) -> FileResponse:
+    df = pd.DataFrame({'Город': 1})
+    df.to_csv('result.csv')
+    response = FileResponse(path='result.csv', media_type='text/csv')
+    return response
+
 # # Секретка
 # token = "4b8b451fade0ca2e9dd4fbe7981e16824d83d619"
 # secret = "9d5947f56cea99fb66e83c82d46662ea195fc008"
@@ -147,12 +154,7 @@ app = FastAPI(title='Популярная геолокация')
 
 #     return 'Вы промахнулись мимо сетки городов, попробуйте снова'
 
-@app.post("/predict_items")
-def predict_items(file: UploadFile = File()) -> FileResponse:
-    df = pd.DataFrame({'Город': 1})
-    df.to_csv('result.csv')
-    response = FileResponse(path='result.csv', media_type='text/csv')
-    return response
+
 
 # @app.post("/file/upload-file")
 # def upload_file(file: UploadFile=File()):
@@ -253,7 +255,7 @@ def predict_items(file: UploadFile = File()) -> FileResponse:
 #                                       poly=cell_center))
 
 #                 hex_features_vector = df[(df['city'] == curr_city) & (df['cell'] == hexagon)] \
-#                     .drop(['city', 'cell', 'avg_score', 'cnt_atms'], axis=1)
+#                     .drop(['city', 'cell'], axis=1)
 
 #                 with open('model_xgb.pkl', 'rb') as file:
 #                     model = pickle.load(file)
