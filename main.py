@@ -55,8 +55,8 @@ def findloc(lat: float, lon: float, poly: np.array) -> list:
     return [j, k]
 
 
-@app.get('/predict_class_by_adress')
-def predict_class_by_adress(adress: str):
+@app.get('/predict_class_by_address')
+def predict_class_by_address(address: str):
     '''
 
     :param adress:
@@ -65,7 +65,7 @@ def predict_class_by_adress(adress: str):
 
     # подаем токен, секретный код и адрес, для которого хотим получить score в dadata
     dadata = Dadata(token, secret)
-    result = dadata.clean('address', adress)
+    result = dadata.clean('address', address)
 
     # дробим на координаты
     latitude = float(result['geo_lat'])
