@@ -14,8 +14,8 @@ app = FastAPI(title='Популярная геолокация')
 
 
 # Секретка
-token = "4b8b451fade0ca2e9dd4fbe7981e16824d83d619"
-secret = "9d5947f56cea99fb66e83c82d46662ea195fc008"
+token = "6716d54a0b7cb797cc251e653359c13eade055b7"
+secret = "3bb9d71eb3046733c5a74d3a3437efc960fd5040"
 
 # Данные
 df = pd.read_parquet('df_1-2_new_-2.parquet')
